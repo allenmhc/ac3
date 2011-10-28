@@ -265,5 +265,9 @@ button {
     page-break-after: avoid; } }
 
 body {
+  background: url(images/noise.png) repeat;
+  color: #666; }
+
+body {
   width: 960px;
   margin: 20px auto; }

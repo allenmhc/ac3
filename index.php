@@ -18,7 +18,7 @@
   <?php wp_head(); ?>
 </head>
 <body>
-  <div id="content"></div>
+  <div id="content">This is some content, yea?</div>
 
   <?php wp_footer(); ?>
 </body>
