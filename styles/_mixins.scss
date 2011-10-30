@@ -1,0 +1,62 @@
+// Utility mixins.
+
+@mixin opacity($args) {
+  opacity: $args;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$args*100})";
+	filter: alpha(opacity=#{$args*100});
+}
+
+@mixin box-shadow($args) {
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  box-shadow: $args;
+}
+
+@mixin text-shadow($args) {
+  -webkit-text-shadow: $args;
+  -moz-text-shadow: $args;
+  text-shadow: $args;
+}
+
+@mixin border-radius($args) {
+  -moz-border-radius: $args;
+  -webkit-border-radius: $args;
+  border-radius: $args;
+  -webkit-background-clip: padding-box;
+}
+
+@mixin border-radius-side($side1, $side2, $args) {
+  -moz-border-#{$side1}-#{$side2}-radius: $args;
+  -webkit-border-#{$side1}-#{$side2}-radius: $args;
+  border-#{$side1}-#{$side2}-radius: $args;
+  -webkit-background-clip: padding-box;
+}
+
+@mixin linear-gradient($direction, $color1, $color2) {
+  background-image: linear-gradient($direction, $color1, $color2);
+  background-image: -o-linear-gradient($direction, $color1, $color2);
+  background-image: -moz-linear-gradient($direction, $color1, $color2);
+  background-image: -webkit-linear-gradient($direction, $color1, $color2);
+  background-image: -ms-linear-gradient($direction, $color1, $color2);
+}
+
+@mixin transition($args) {
+  -moz-transition: $args;
+  -webkit-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin img-zoom($seconds: 0.2, $scale: 1.2) {
+  -webkit-transition: -webkit-transform #{$seconds}s ease-in-out;
+  -moz-transition: -moz-transform #{$seconds}s ease-in-out;
+  -o-transition: -o-transform #{$seconds}s ease-in-out;
+  transition: transform #{$seconds}s ease-in-out;
+  &:hover {
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -o-transform: scale($scale);
+    -ms-transform: scale($scale);
+    transform: scale($scale);
+  }
+}

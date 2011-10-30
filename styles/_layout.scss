@@ -1,7 +1,22 @@
 // Layout styles.
 
-$site-width: 960px;
-body {
+@import "config";
+
+header {
+  width: 100%;
+
+  #header-content {
+    width: $site-width;
+    margin: 0 auto;
+  }
+}
+
+#content {
   width: $site-width;
   margin: 20px auto;
+}
+
+p {
+  font-size: 14px;
+  margin: 30px 0;
 }

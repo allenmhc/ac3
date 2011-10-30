@@ -1,0 +1,54 @@
+header {
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(top, #a1afbd, #859fb8);
+  background-image: -o-linear-gradient(top, #a1afbd, #859fb8);
+  background-image: -moz-linear-gradient(top, #a1afbd, #859fb8);
+  background-image: -webkit-linear-gradient(top, #a1afbd, #859fb8);
+  background-image: -ms-linear-gradient(top, #a1afbd, #859fb8);
+  background-color: #a1afbd;
+  position: fixed;
+  top: 0;
+  height: 60px;
+  clear: both; }
+
+#header-title {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 60px;
+  font-family: "Raleway", sans-serif;
+  float: left; }
+  #header-title h1 {
+    -webkit-text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    -moz-text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 5px;
+    left: 0;
+    font-size: 48px;
+    color: #eee;
+    line-height: 40px;
+    z-index: 10; }
+  #header-title:hover h1 {
+    color: #fff; }
+  #header-title h3 {
+    -webkit-text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4);
+    -moz-text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4);
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 40px;
+    left: 0;
+    font-size: 14px;
+    color: #000; }
+  #header-title:hover h3 {
+    color: #333; }
+
+#header-nav {
+  display: block;
+  height: 60px;
+  float: right; }
+  #header-nav li {
+    float: left;
+    margin: 10px 15px; }

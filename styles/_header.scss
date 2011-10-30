@@ -1,0 +1,111 @@
+// Header styles.
+
+@import "config";
+@import "mixins";
+
+$height: 50px;
+header {
+  @include box-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
+  @include linear-gradient(top, $color-prim-light, $color-prim);
+  background-color: $color-prim-light;
+  position: fixed;
+  top: 0;
+  height: $height;
+  clear: both;
+}
+
+#header-title {
+  display: block;
+  position: relative;
+  width: $site-width / 2;
+  height: $height;
+  font-family: $font-raleway;
+  float: left;
+  overflow: hidden;
+
+  h1 {
+    @include text-shadow(0px 1px 3px rgba(0, 0, 0, 0.2));
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    font-size: 48px;
+    color: #eee;
+    line-height: 40px;
+    z-index: 10;
+  }
+  &:hover {
+    h1 {
+      color: #fff;
+    }
+    h3 {
+      left: 50px;
+    }
+  }
+
+  h3 {
+    @include text-shadow(0px 1px 1px rgba(255, 255, 255, 0.4));
+    @include transition(left 300ms linear);
+    position: absolute;
+    bottom: 0;
+    left: -300px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #000;
+  }
+}
+
+$nav-padding: 20px;
+#header-nav {
+  display: block;
+  height: $height;
+  float: right;
+  font-family: $font-gothic;
+  margin-right: -$nav-padding;
+  text-align: right;
+  overflow: hidden;
+
+  .nav-item {
+    float: left;
+
+    &.selected {
+      @include linear-gradient(top, $color-sec-light, $color-sec);
+      background-color: $color-sec;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-top: none;
+    }
+
+    a {
+      display: block;
+      padding-left: $nav-padding;
+      padding-right: $nav-padding;
+      height: $height;
+      position: relative;
+    }
+
+    h4 {
+      @include text-shadow(0px 1px 2px rgba(255, 255, 255, 0.25));
+      @include transition(padding-top 200ms ease-in);
+      font-size: 18px;
+      font-weight: normal;
+      color: #333;
+      padding-top: 25px;
+    }
+    .subtext {
+      @include transition(bottom 200ms ease-in);
+      font-size: 12px;
+      color: #ddd;
+      position: absolute;
+      bottom: 60px;
+      line-height: 0px;
+      right: $nav-padding;
+    }
+    a:hover {
+      h4 {
+        padding-top: 15px;
+      }
+      .subtext {
+        bottom: 12px;
+      }
+    }
+  }
+}
