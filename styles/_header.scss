@@ -12,6 +12,7 @@ header {
   top: 0;
   height: $height;
   clear: both;
+  overflow: hidden;
 }
 
 #header-title {
@@ -21,7 +22,6 @@ header {
   height: $height;
   font-family: $font-raleway;
   float: left;
-  overflow: hidden;
 
   h1 {
     @include text-shadow(0px 1px 3px rgba(0, 0, 0, 0.2));
@@ -47,7 +47,7 @@ header {
     @include transition(left 300ms linear);
     position: absolute;
     bottom: 0;
-    left: -300px;
+    left: -400px;
     line-height: 20px;
     font-size: 14px;
     color: #000;
@@ -62,7 +62,6 @@ $nav-padding: 20px;
   font-family: $font-gothic;
   margin-right: -$nav-padding;
   text-align: right;
-  overflow: hidden;
 
   .nav-item {
     float: left;
