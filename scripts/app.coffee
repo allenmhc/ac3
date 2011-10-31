@@ -3,4 +3,5 @@ window.AppView = Backbone.View.extend {
 
   initialize: ->
     @currentPosts = new AC.content.Posts()
+    @currentPosts.fetchRecent()
 }

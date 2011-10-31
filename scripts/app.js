@@ -2,7 +2,8 @@
   window.AppView = Backbone.View.extend({
     el: $("#content"),
     initialize: function() {
-      return this.currentPosts = new AC.content.Posts();
+      this.currentPosts = new AC.content.Posts();
+      return this.currentPosts.fetchRecent();
     }
   });
 }).call(this);

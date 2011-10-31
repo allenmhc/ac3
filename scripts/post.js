@@ -8,23 +8,24 @@
     _base.content = {};
   }
   AC.content.Post = Backbone.Model.extend({
-    initialize: function(post) {
-      this.post = post;
-    }
+    initialize: function() {}
   });
   AC.content.Posts = Backbone.Collection.extend({
     model: AC.content.Post,
-    initialize: function() {
-      AC.api.getRecentPosts(__bind(function(posts) {
-        var post, _i, _len, _results;
-        _results = [];
-        for (_i = 0, _len = posts.length; _i < _len; _i++) {
-          post = posts[_i];
-          _results.push(this.add(new AC.content.Post(post)));
-        }
-        return _results;
+    initialize: function() {},
+    fetchRecent: function() {
+      return AC.api.getRecentPosts(__bind(function(posts) {
+        var post;
+        return this.reset((function() {
+          var _i, _len, _results;
+          _results = [];
+          for (_i = 0, _len = posts.length; _i < _len; _i++) {
+            post = posts[_i];
+            _results.push(new AC.content.Post(post));
+          }
+          return _results;
+        })());
       }, this));
-      return console.log(this.length);
     }
   });
   AC.content.PostView = Backbone.View.extend({
