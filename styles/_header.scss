@@ -30,7 +30,7 @@ header {
     left: 0;
     font-size: 60px;
     color: #eee;
-    line-height: 50px;
+    line-height: 60px;
     letter-spacing: 2px;
     z-index: 10;
   }
@@ -51,7 +51,7 @@ header {
     position: absolute;
     bottom: 0;
     left: -500px;
-    line-height: 27px;
+    line-height: 38px;
     letter-spacing: 2px;
     font-size: 14px;
     color: #222;
@@ -91,7 +91,7 @@ $nav-padding: 20px;
       font-size: 20px;
       font-weight: normal;
       color: #333;
-      padding-top: 32px;
+      padding-top: 26px;
     }
     .subtext {
       @include transition(bottom 200ms ease-in);
@@ -104,10 +104,10 @@ $nav-padding: 20px;
     }
     a:hover {
       h4 {
-        padding-top: 20px;
+        padding-top: 13px;
       }
       .subtext {
-        bottom: 14px;
+        bottom: 20px;
       }
     }
   }
