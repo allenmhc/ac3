@@ -17,4 +17,4 @@ class API
       callback data.posts
 
 window.AC ?= {}
-window.AC.api = new API(apiRoot)
+window.AC.api = new API(rootUrl)

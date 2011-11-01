@@ -1,19 +1,65 @@
 (function() {
   var _base, _ref, _ref2;
-  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+  var __hasProp = Object.prototype.hasOwnProperty, __extends = function(child, parent) {
+    for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; }
+    function ctor() { this.constructor = child; }
+    ctor.prototype = parent.prototype;
+    child.prototype = new ctor;
+    child.__super__ = parent.prototype;
+    return child;
+  }, __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
   if ((_ref = window.AC) == null) {
     window.AC = {};
   }
   if ((_ref2 = (_base = window.AC).content) == null) {
     _base.content = {};
   }
-  AC.content.Post = Backbone.Model.extend({
-    initialize: function() {}
-  });
-  AC.content.Posts = Backbone.Collection.extend({
-    model: AC.content.Post,
-    initialize: function() {},
-    fetchRecent: function() {
+  AC.content.Post = (function() {
+    __extends(Post, Backbone.Model);
+    function Post() {
+      Post.__super__.constructor.apply(this, arguments);
+    }
+    Post.prototype.initialize = function() {};
+    return Post;
+  })();
+  AC.content.PostView = (function() {
+    __extends(PostView, Backbone.View);
+    function PostView() {
+      PostView.__super__.constructor.apply(this, arguments);
+    }
+    PostView.prototype.tagName = 'article';
+    PostView.prototype.className = 'post';
+    PostView.prototype.events = {};
+    PostView.prototype.initialize = function() {
+      return this._initTemplates();
+    };
+    PostView.prototype._initTemplates = function() {
+      var _base2, _ref3;
+      return (_ref3 = (_base2 = AC.content.PostView).templates) != null ? _ref3 : _base2.templates = {
+        titleBar: _.template($('#template-post-title').html()),
+        body: _.template($('#template-post-body').html())
+      };
+    };
+    PostView.prototype.render = function() {
+      var bodyHtml, titleHtml;
+      titleHtml = this._renderTemplate('titleBar');
+      bodyHtml = this._renderTemplate('body');
+      $(this.el).html(titleHtml + bodyHtml);
+      return this;
+    };
+    PostView.prototype._renderTemplate = function(tmplName) {
+      return AC.content.PostView.templates[tmplName](this.model.toJSON());
+    };
+    return PostView;
+  })();
+  AC.content.Posts = (function() {
+    __extends(Posts, Backbone.Collection);
+    function Posts() {
+      Posts.__super__.constructor.apply(this, arguments);
+    }
+    Posts.prototype.model = AC.content.Post;
+    Posts.prototype.initialize = function() {};
+    Posts.prototype.fetchRecent = function() {
       return AC.api.getRecentPosts(__bind(function(posts) {
         var post;
         return this.reset((function() {
@@ -26,12 +72,7 @@
           return _results;
         })());
       }, this));
-    }
-  });
-  AC.content.PostView = Backbone.View.extend({
-    tagName: 'article',
-    className: 'post',
-    events: {},
-    render: function() {}
-  });
+    };
+    return Posts;
+  })();
 }).call(this);

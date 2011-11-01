@@ -34,5 +34,5 @@
   if ((_ref = window.AC) == null) {
     window.AC = {};
   }
-  window.AC.api = new API(apiRoot);
+  window.AC.api = new API(rootUrl);
 }).call(this);

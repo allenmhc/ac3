@@ -44,16 +44,18 @@
     </div>
   </header>
 
-  <div id="content">
+  <div id="content" class="clearfix">
+    <div id="alpha"></div>
+    <div id="beta"></div>
   </div>
 
   <?php wp_footer(); ?>
 </body>
 <script>
-  var apiRoot = "<?php echo get_option('siteurl'); ?>";
+  var rootUrl = "<?php echo get_option('siteurl'); ?>";
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script src="<?php echo get_bloginfo('template_directory'); ?>/scripts/lib/underscore.min.js"></script>
+<script src="<?php echo get_bloginfo('template_directory'); ?>/scripts/lib/underscore.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/scripts/lib/json2.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/scripts/lib/backbone.min.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/scripts/api.js"></script>
@@ -61,7 +63,11 @@
 <script src="<?php echo get_bloginfo('template_directory'); ?>/scripts/app.js"></script>
 <script>
   $(document).ready(function() {
-    window.App = new AppView;
+    // Fetch templates before starting app.
+    $.get('<?php echo get_bloginfo('template_directory'); ?>/templates.html', function(templates) {
+      $("body").append(templates);
+      window.App = new AppView;
+    });
   });
 </script>
 </html>
