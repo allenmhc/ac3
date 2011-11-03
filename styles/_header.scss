@@ -4,7 +4,7 @@
 @import "mixins";
 
 $height: 60px;
-header {
+header#site-header {
   @include box-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
   @include linear-gradient(top, $color-prim-light, $color-prim);
   background-color: $color-prim-light;

@@ -5,8 +5,6 @@ class AC.content.Post extends Backbone.Model
   initialize: ->
 
 class AC.content.PostView extends Backbone.View
-  tagName: 'article'
-  className: 'post'
   events: {}
 
   initialize: ->
@@ -15,15 +13,23 @@ class AC.content.PostView extends Backbone.View
   _initTemplates: ->
     # Cache compiled templates on first load. Can't quite do it at first parse b/c we read it from $.get().
     AC.content.PostView.templates ?= {
-      titleBar: _.template $('#template-post-title').html()
-      body: _.template $('#template-post-body').html()
+      full: _.template $('#template-post-full').html()
+      link: _.template $('#template-post-link').html()
     }
 
   render: ->
-    titleHtml = @_renderTemplate 'titleBar'
-    bodyHtml = @_renderTemplate 'body'
-    $(@el).html(titleHtml + bodyHtml)
     this
+
+  renderPost: ->
+    fullPost = $(@_renderTemplate 'full')
+    date = Date.parse @model.get('date')
+    timeElem = fullPost.find '.metainfo time'
+    timeElem.attr 'datetime', date.toString('yyyy-MM-dd')
+    timeElem.text date.toString('MMM d, yyyy')
+    fullPost
+
+  renderLink: ->
+    @_renderTemplate 'link'
 
   _renderTemplate: (tmplName) ->
     AC.content.PostView.templates[tmplName] @model.toJSON()
@@ -33,6 +39,6 @@ class AC.content.Posts extends Backbone.Collection
 
   initialize: ->
 
-  fetchRecent: ->
-    AC.api.getRecentPosts (posts) =>
+  fetchRecent: (num) ->
+    AC.api.getRecentPosts num, (posts) =>
       @reset (new AC.content.Post(post) for post in posts)

@@ -24,8 +24,10 @@
         }
       });
     };
-    API.prototype.getRecentPosts = function(callback) {
-      return this.get("get_recent_posts", {}, function(data) {
+    API.prototype.getRecentPosts = function(num, callback) {
+      return this.get("get_recent_posts", {
+        'count': num
+      }, function(data) {
         return callback(data.posts);
       });
     };

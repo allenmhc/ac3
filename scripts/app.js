@@ -20,9 +20,36 @@
       AppView.__super__.constructor.apply(this, arguments);
     }
     AppView.prototype.el = $("#content");
+    AppView.prototype.INIT_POSTS = 20;
+    AppView.prototype.INIT_RECENT_POSTS = 20;
     AppView.prototype.initialize = function() {
       this.alphaView = new AC.content.AlphaView();
-      return this.betaView = new AC.content.BetaView();
+      this.betaView = new AC.content.BetaView();
+      this.currentPosts = new AC.content.Posts();
+      this.currentPosts.fetchRecent(this.INIT_RECENT_POSTS);
+      return this._eventsBind();
+    };
+    AppView.prototype._eventsBind = function() {
+      return this.currentPosts.bind('all', this.render, this);
+    };
+    AppView.prototype.render = function() {
+      var i;
+      this.alphaView.clearPosts();
+      this.betaView.clearRecentPosts();
+      i = 0;
+      return this.currentPosts.each(__bind(function(post) {
+        var view;
+        view = new AC.content.PostView({
+          model: post
+        });
+        if (i < this.INIT_POSTS) {
+          this.alphaView.addPost(view);
+        }
+        if (i < this.INIT_RECENT_POSTS) {
+          this.betaView.addRecentPostLink(view);
+        }
+        return i += 1;
+      }, this));
     };
     return AppView;
   })();
@@ -32,22 +59,11 @@
       AlphaView.__super__.constructor.apply(this, arguments);
     }
     AlphaView.prototype.el = $("#alpha");
-    AlphaView.prototype.initialize = function() {
-      this.currentPosts = new AC.content.Posts();
-      this.currentPosts.fetchRecent();
-      return this._eventsBind();
+    AlphaView.prototype.addPost = function(post) {
+      return this.el.append(post.renderPost());
     };
-    AlphaView.prototype._eventsBind = function() {
-      return this.currentPosts.bind('all', this.render, this);
-    };
-    AlphaView.prototype.render = function() {
-      return this.currentPosts.each(__bind(function(post) {
-        var view;
-        view = new AC.content.PostView({
-          model: post
-        });
-        return this.el.append(view.render().el);
-      }, this));
+    AlphaView.prototype.clearPosts = function() {
+      return this.el.html('');
     };
     return AlphaView;
   })();
@@ -57,6 +73,20 @@
       BetaView.__super__.constructor.apply(this, arguments);
     }
     BetaView.prototype.el = $("#beta");
+    BetaView.prototype["class"] = 'sidebar';
+    BetaView.prototype.initialize = function() {
+      this.recentPosts = $('<ul id="recent-posts" />');
+      return this.el.append(this.recentPosts);
+    };
+    BetaView.prototype.addRecentPostLink = function(post) {
+      var linkHtml;
+      linkHtml = $(post.renderLink());
+      this.recentPosts.append(linkHtml);
+      return linkHtml.wrap('<li>');
+    };
+    BetaView.prototype.clearRecentPosts = function() {
+      return this.recentPosts.html('');
+    };
     return BetaView;
   })();
 }).call(this);

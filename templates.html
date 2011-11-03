@@ -1,11 +1,17 @@
-<script id="template-post-title" type="text/template">
-  <div class="post-title">
+<script id="template-post-full" type="text/template">
+<article class="post">
+  <header class="post-title">
     <h1><%= title %></h1>
-  </div>
-</script>
-
-<script id="template-post-body" type="text/template">
+    <div class="metainfo">
+      <time datetime="" pubdate="pubdate"></time>
+    </div>
+  </header>
   <div class="post-body">
     <%= content %>
   </div>
+</article>
+</script>
+
+<script id="template-post-link" type="text/template">
+<a class="post-link" href="#post/<%= slug %>"><%= title %></a>
 </script>

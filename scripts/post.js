@@ -27,8 +27,6 @@
     function PostView() {
       PostView.__super__.constructor.apply(this, arguments);
     }
-    PostView.prototype.tagName = 'article';
-    PostView.prototype.className = 'post';
     PostView.prototype.events = {};
     PostView.prototype.initialize = function() {
       return this._initTemplates();
@@ -36,16 +34,24 @@
     PostView.prototype._initTemplates = function() {
       var _base2, _ref3;
       return (_ref3 = (_base2 = AC.content.PostView).templates) != null ? _ref3 : _base2.templates = {
-        titleBar: _.template($('#template-post-title').html()),
-        body: _.template($('#template-post-body').html())
+        full: _.template($('#template-post-full').html()),
+        link: _.template($('#template-post-link').html())
       };
     };
     PostView.prototype.render = function() {
-      var bodyHtml, titleHtml;
-      titleHtml = this._renderTemplate('titleBar');
-      bodyHtml = this._renderTemplate('body');
-      $(this.el).html(titleHtml + bodyHtml);
       return this;
+    };
+    PostView.prototype.renderPost = function() {
+      var date, fullPost, timeElem;
+      fullPost = $(this._renderTemplate('full'));
+      date = Date.parse(this.model.get('date'));
+      timeElem = fullPost.find('.metainfo time');
+      timeElem.attr('datetime', date.toString('yyyy-MM-dd'));
+      timeElem.text(date.toString('MMM d, yyyy'));
+      return fullPost;
+    };
+    PostView.prototype.renderLink = function() {
+      return this._renderTemplate('link');
     };
     PostView.prototype._renderTemplate = function(tmplName) {
       return AC.content.PostView.templates[tmplName](this.model.toJSON());
@@ -59,8 +65,8 @@
     }
     Posts.prototype.model = AC.content.Post;
     Posts.prototype.initialize = function() {};
-    Posts.prototype.fetchRecent = function() {
-      return AC.api.getRecentPosts(__bind(function(posts) {
+    Posts.prototype.fetchRecent = function(num) {
+      return AC.api.getRecentPosts(num, __bind(function(posts) {
         var post;
         return this.reset((function() {
           var _i, _len, _results;

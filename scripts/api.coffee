@@ -12,8 +12,8 @@ class API
         success(data) if success?
     )
 
-  getRecentPosts: (callback) ->
-    @get "get_recent_posts", {}, (data) ->
+  getRecentPosts: (num, callback) ->
+    @get "get_recent_posts", {'count': num}, (data) ->
       callback data.posts
 
 window.AC ?= {}

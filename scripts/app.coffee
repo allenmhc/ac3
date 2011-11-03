@@ -4,16 +4,14 @@ window.AC.content ?= {}
 class window.AppView extends Backbone.View
   el: $("#content")
 
+  INIT_POSTS: 20,
+  INIT_RECENT_POSTS: 20
+
   initialize: ->
     @alphaView = new AC.content.AlphaView()
     @betaView = new AC.content.BetaView()
-
-class AC.content.AlphaView extends Backbone.View
-  el: $("#alpha")
-
-  initialize: ->
     @currentPosts = new AC.content.Posts()
-    @currentPosts.fetchRecent()
+    @currentPosts.fetchRecent(@INIT_RECENT_POSTS)
 
     @_eventsBind()
 
@@ -21,9 +19,37 @@ class AC.content.AlphaView extends Backbone.View
     @currentPosts.bind 'all', @render, this
 
   render: ->
+    @alphaView.clearPosts()
+    @betaView.clearRecentPosts()
+
+    i = 0
     @currentPosts.each (post) =>
       view = new AC.content.PostView {model: post}
-      @el.append view.render().el
+      @alphaView.addPost(view) if i < @INIT_POSTS
+      @betaView.addRecentPostLink(view) if i < @INIT_RECENT_POSTS
+      i += 1
+
+class AC.content.AlphaView extends Backbone.View
+  el: $("#alpha")
+
+  addPost: (post) ->
+    @el.append post.renderPost()
+
+  clearPosts: ->
+    @el.html ''
 
 class AC.content.BetaView extends Backbone.View
   el: $("#beta")
+  class: 'sidebar'
+
+  initialize: ->
+    @recentPosts = $('<ul id="recent-posts" />')
+    @el.append(@recentPosts)
+
+  addRecentPostLink: (post) ->
+    linkHtml = $(post.renderLink())
+    @recentPosts.append linkHtml
+    linkHtml.wrap('<li>')
+
+  clearRecentPosts: ->
+    @recentPosts.html ''

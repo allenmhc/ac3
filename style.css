@@ -280,9 +280,9 @@ ul {
   list-style: none;
   margin-left: 0; }
 
-header {
+header#site-header {
   width: 100%; }
-  header #header-content {
+  header#site-header #header-content {
     width: 960px;
     margin: 0 auto; }
 
@@ -303,29 +303,17 @@ header {
   float: left; }
 
 #beta {
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-background-clip: padding-box;
   width: 240px;
   float: right;
-  font-family: "Century Gothic", Verdana, Helvetica, Arial, sans-serif;
-  background: rgba(255, 255, 255, 0.3); }
+  font-family: "Century Gothic", Verdana, Helvetica, Arial, sans-serif; }
   #beta li {
     text-align: right;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     line-height: 20px; }
-    #beta li:hover {
-      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
 
-header {
+header#site-header {
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
@@ -433,3 +421,67 @@ header {
       padding-top: 13px; }
     #header-nav .nav-item a:hover .subtext {
       bottom: 20px; }
+
+article.post {
+  margin: 40px; }
+  article.post .post-title {
+    float: right;
+    margin: 0 0 20px 20px;
+    max-width: 350px; }
+    article.post .post-title h1 {
+      -webkit-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      -moz-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      text-align: right;
+      color: #859fb8;
+      padding: 0 0 0 40px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      font-family: "Raleway", sans-serif;
+      font-size: 28px;
+      font-weight: bold; }
+    article.post .post-title .metainfo {
+      font-family: "Century Gothic", Verdana, Helvetica, Arial, sans-serif;
+      padding-top: 5px;
+      font-size: 12px;
+      color: #c0ad6b;
+      border-top: 1px solid rgba(255, 255, 255, 0.3); }
+      article.post .post-title .metainfo time {
+        float: right; }
+
+article.post .post-body {
+  font-size: 14px;
+  color: #222; }
+  article.post .post-body a.more-link {
+    color: #bfb494;
+    text-decoration: none; }
+    article.post .post-body a.more-link:hover {
+      text-decoration: underline; }
+  article.post .post-body p {
+    line-height: 24px;
+    margin: 15px 0; }
+  article.post .post-body blockquote {
+    border-left: 1px solid #a1afbd;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 10px 0 0;
+    padding: 0 25px; }
+  article.post .post-body img {
+    max-width: 600px; }
+  article.post .post-body p.wp-caption-text {
+    color: #aaa;
+    font-size: 90%;
+    margin: 0;
+    text-align: center; }
+  article.post .post-body .alignleft {
+    display: inline;
+    float: left;
+    margin-right: 15px; }
+  article.post .post-body .alignright {
+    display: inline;
+    float: right;
+    margin-left: 15px; }
+  article.post .post-body .aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
