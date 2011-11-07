@@ -28,42 +28,28 @@ article.post {
       font-size: 12px;
       color: $color-sec;
       border-top: 1px solid rgba(255, 255, 255, 0.3);
-      time {
-        float: right;
-        padding-right: 40px;
-      }
-      $category-color: #999;
-      .categories {
-        max-width: 200px;
-      }
-      .category {
-        color: $category-color;
-        margin: 0 5px;
-        &:first-child { margin-left: 0; }
-        &:last-child { margin-right: 0; }
-        &:hover {
-          border-bottom: 1px dotted $category-color;
-        }
-      }
     }
   }
 
-  .post-body {
-
+  $category-color: #999;
+  .post-categories {
+    list-style: none;
+    li {
+      float: left;
+      color: $category-color;
+      margin: 0 5px;
+      &:first-child { margin-left: 0; }
+      &:last-child { margin-right: 0; }
+      &:hover {
+        border-bottom: 1px dotted $category-color;
+      }
+    }
   }
 }
 
 article.post .post-body {
   font-size: 14px;
   color: #222;
-
-  a.more-link {
-    color: $color-sec-light;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 
   p {
     line-height: 24px;
@@ -121,4 +107,19 @@ article.post .post-body {
   pre, code {
     font-size: 13px;
   }
+}
+
+.share-this {
+  margin: 25px 0 5px;
+  text-align: right;
+}
+
+.shareaholic-like-buttonset {
+  margin: 20px auto 0
+}
+
+#comments {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  margin: 20px 0 10px;
 }

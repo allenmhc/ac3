@@ -14,7 +14,7 @@ header#site-header {
 
 #content {
   width: $site-width;
-  margin: 40px auto;
+  margin: 100px auto 40px;
 }
 
 #alpha {
@@ -23,7 +23,6 @@ header#site-header {
   background: rgba(255, 255, 255, 0.3);
   width: 680px;
   float: left;
-//  margin-left: -40px;
 }
 
 #beta {
@@ -37,4 +36,9 @@ header#site-header {
     padding-bottom: 5px;
     line-height: 20px;
   }
+}
+
+footer {
+  width: $site-width;
+  margin: 0 auto;
 }
