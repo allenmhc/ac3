@@ -15,6 +15,7 @@ class AC.content.PostView extends Backbone.View
     AC.content.PostView.templates ?= {
       full: _.template $('#template-post-full').html()
       link: _.template $('#template-post-link').html()
+      category: _.template '<a href="#!category/<%= slug %>" class="category"><%= category %></a>'
     }
 
   render: ->
@@ -26,6 +27,15 @@ class AC.content.PostView extends Backbone.View
     timeElem = fullPost.find '.metainfo time'
     timeElem.attr 'datetime', date.toString('yyyy-MM-dd')
     timeElem.text date.toString('MMM d, yyyy')
+    categoryElem = fullPost.find '.metainfo .categories'
+    categories = @model.get('categories')
+    i = 0
+    while i < categories.length
+      c = categories[i]
+      category = AC.content.PostView.templates['category'] { 'category': c.title, 'slug': c.slug }
+      category += ('/') if i < categories.length - 1
+      categoryElem.append category
+      i += 1
     fullPost
 
   renderLink: ->

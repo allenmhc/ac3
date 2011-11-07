@@ -4,8 +4,8 @@ window.AC.content ?= {}
 class window.AppView extends Backbone.View
   el: $("#content")
 
-  INIT_POSTS: 20,
-  INIT_RECENT_POSTS: 20
+  INIT_POSTS: 1,
+  INIT_RECENT_POSTS: 5
 
   initialize: ->
     @alphaView = new AC.content.AlphaView()

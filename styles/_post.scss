@@ -7,18 +7,18 @@ article.post {
   margin: 40px;
 
   .post-title {
-    float: right;
-    margin: 0 0 20px 20px;
-    max-width: 350px;
+    float: left;
+    margin: 0 20px 20px 0px;
+    max-width: 300px;
     h1 {
       @include text-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
-      text-align: right;
+      text-align: left;
       color: $color-prim;
-      padding: 0 0 0 40px;
+      padding: 0 40px 0 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       font: {
         family: $font-raleway;
-        size: 28px;
+        size: 22px;
         weight: bold;
       }
     }
@@ -30,6 +30,20 @@ article.post {
       border-top: 1px solid rgba(255, 255, 255, 0.3);
       time {
         float: right;
+        padding-right: 40px;
+      }
+      $category-color: #999;
+      .categories {
+        max-width: 200px;
+      }
+      .category {
+        color: $category-color;
+        margin: 0 5px;
+        &:first-child { margin-left: 0; }
+        &:last-child { margin-right: 0; }
+        &:hover {
+          border-bottom: 1px dotted $category-color;
+        }
       }
     }
   }
@@ -93,5 +107,18 @@ article.post .post-body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+  // Lists.
+  ul, ol {
+    list-style-position: inside;
+    margin: 0 20px;
+    li {
+      margin: 8px 0;
+      line-height: 24px;
+    }
+  }
+  // Code
+  pre, code {
+    font-size: 13px;
   }
 }

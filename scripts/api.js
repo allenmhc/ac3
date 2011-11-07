@@ -25,7 +25,7 @@
       });
     };
     API.prototype.getRecentPosts = function(num, callback) {
-      return this.get("get_recent_posts", {
+      return this.get("get_recent_posts_full", {
         'count': num
       }, function(data) {
         return callback(data.posts);

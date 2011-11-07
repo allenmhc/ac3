@@ -35,19 +35,35 @@
       var _base2, _ref3;
       return (_ref3 = (_base2 = AC.content.PostView).templates) != null ? _ref3 : _base2.templates = {
         full: _.template($('#template-post-full').html()),
-        link: _.template($('#template-post-link').html())
+        link: _.template($('#template-post-link').html()),
+        category: _.template('<a href="#!category/<%= slug %>" class="category"><%= category %></a>')
       };
     };
     PostView.prototype.render = function() {
       return this;
     };
     PostView.prototype.renderPost = function() {
-      var date, fullPost, timeElem;
+      var c, categories, category, categoryElem, date, fullPost, i, timeElem;
       fullPost = $(this._renderTemplate('full'));
       date = Date.parse(this.model.get('date'));
       timeElem = fullPost.find('.metainfo time');
       timeElem.attr('datetime', date.toString('yyyy-MM-dd'));
       timeElem.text(date.toString('MMM d, yyyy'));
+      categoryElem = fullPost.find('.metainfo .categories');
+      categories = this.model.get('categories');
+      i = 0;
+      while (i < categories.length) {
+        c = categories[i];
+        category = AC.content.PostView.templates['category']({
+          'category': c.title,
+          'slug': c.slug
+        });
+        if (i < categories.length - 1) {
+          category += '/';
+        }
+        categoryElem.append(category);
+        i += 1;
+      }
       return fullPost;
     };
     PostView.prototype.renderLink = function() {

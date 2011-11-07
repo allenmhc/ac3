@@ -20,8 +20,8 @@
       AppView.__super__.constructor.apply(this, arguments);
     }
     AppView.prototype.el = $("#content");
-    AppView.prototype.INIT_POSTS = 20;
-    AppView.prototype.INIT_RECENT_POSTS = 20;
+    AppView.prototype.INIT_POSTS = 1;
+    AppView.prototype.INIT_RECENT_POSTS = 5;
     AppView.prototype.initialize = function() {
       this.alphaView = new AC.content.AlphaView();
       this.betaView = new AC.content.BetaView();

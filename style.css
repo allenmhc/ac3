@@ -277,7 +277,6 @@ a {
     text-decoration: none; }
 
 ul {
-  list-style: none;
   margin-left: 0; }
 
 header#site-header {
@@ -288,7 +287,7 @@ header#site-header {
 
 #content {
   width: 960px;
-  margin: 100px auto 20px; }
+  margin: 40px auto; }
 
 #alpha {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
@@ -323,7 +322,6 @@ header#site-header {
   background-image: -webkit-linear-gradient(top, #a1afbd, #859fb8);
   background-image: -ms-linear-gradient(top, #a1afbd, #859fb8);
   background-color: #a1afbd;
-  position: fixed;
   top: 0;
   height: 60px;
   clear: both;
@@ -425,19 +423,19 @@ header#site-header {
 article.post {
   margin: 40px; }
   article.post .post-title {
-    float: right;
-    margin: 0 0 20px 20px;
-    max-width: 350px; }
+    float: left;
+    margin: 0 20px 20px 0px;
+    max-width: 300px; }
     article.post .post-title h1 {
       -webkit-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
       -moz-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-      text-align: right;
+      text-align: left;
       color: #859fb8;
-      padding: 0 0 0 40px;
+      padding: 0 40px 0 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       font-family: "Raleway", sans-serif;
-      font-size: 28px;
+      font-size: 22px;
       font-weight: bold; }
     article.post .post-title .metainfo {
       font-family: "Century Gothic", Verdana, Helvetica, Arial, sans-serif;
@@ -446,7 +444,19 @@ article.post {
       color: #c0ad6b;
       border-top: 1px solid rgba(255, 255, 255, 0.3); }
       article.post .post-title .metainfo time {
-        float: right; }
+        float: right;
+        padding-right: 40px; }
+      article.post .post-title .metainfo .categories {
+        max-width: 200px; }
+      article.post .post-title .metainfo .category {
+        color: #999999;
+        margin: 0 5px; }
+        article.post .post-title .metainfo .category:first-child {
+          margin-left: 0; }
+        article.post .post-title .metainfo .category:last-child {
+          margin-right: 0; }
+        article.post .post-title .metainfo .category:hover {
+          border-bottom: 1px dotted #999999; }
 
 article.post .post-body {
   font-size: 14px;
@@ -485,3 +495,11 @@ article.post .post-body {
     display: block;
     margin-left: auto;
     margin-right: auto; }
+  article.post .post-body ul, article.post .post-body ol {
+    list-style-position: inside;
+    margin: 0 20px; }
+    article.post .post-body ul li, article.post .post-body ol li {
+      margin: 8px 0;
+      line-height: 24px; }
+  article.post .post-body pre, article.post .post-body code {
+    font-size: 13px; }
