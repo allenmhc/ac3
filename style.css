@@ -271,10 +271,11 @@ body {
   font-family: museo-sans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
   font-weight: normal; }
 
-a {
+a, a:active, a:visited {
+  color: #748ea7;
   text-decoration: none; }
-  a:hover {
-    text-decoration: none; }
+  a:hover, a:active:hover, a:visited:hover {
+    color: #96b0eb; }
 
 ul {
   margin-left: 0; }
@@ -460,6 +461,8 @@ article.post {
 article.post .post-body {
   font-size: 14px;
   color: #222; }
+  article.post .post-body h1, article.post .post-body h2, article.post .post-body h3, article.post .post-body h4, article.post .post-body h5, article.post .post-body h6 {
+    margin-top: 25px; }
   article.post .post-body p {
     line-height: 24px;
     margin: 15px 0; }
@@ -469,6 +472,8 @@ article.post .post-body {
     line-height: 16px;
     margin: 0 10px 0 0;
     padding: 0 25px; }
+  article.post .post-body a:hover {
+    text-decoration: underline; }
   article.post .post-body img {
     max-width: 600px; }
   article.post .post-body p.wp-caption-text {
@@ -497,6 +502,28 @@ article.post .post-body {
       line-height: 24px; }
   article.post .post-body pre, article.post .post-body code {
     font-size: 13px; }
+  article.post .post-body .syntaxhighlighter {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-background-clip: padding-box;
+    border: 1px solid #a1afbd;
+    padding: 5px; }
+  article.post .post-body #footnote-list {
+    color: #666;
+    font-size: 13px;
+    margin: 0 -40px;
+    padding: 20px 40px; }
+    article.post .post-body #footnote-list ol {
+      margin: 0 10px; }
+      article.post .post-body #footnote-list ol li {
+        line-height: 18px; }
+
+article.post .categories {
+  text-align: right;
+  font-family: "Century Gothic", Verdana, Helvetica, Arial, sans-serif; }
+  article.post .categories a:hover {
+    text-decoration: underline; }
 
 .share-this {
   margin: 25px 0 5px;
@@ -509,6 +536,14 @@ article.post .post-body {
   border-top: 1px solid #ccc;
   padding-top: 15px;
   margin: 20px 0 10px; }
+
+body div#footnotediv {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  background-color: #222;
+  border: 1px solid #a1afbd; }
 
 footer {
   color: #999;

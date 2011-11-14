@@ -16,10 +16,11 @@ body {
 
 }
 
-a {
+a, a:active, a:visited {
+  color: $color-link;
   text-decoration: none;
   &:hover {
-    text-decoration: none;
+    color: $color-link + #224;
   }
 }
 

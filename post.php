@@ -16,7 +16,7 @@
     ?>
   </div>
 
-  Posted under <?php the_category(); ?>
+  <aside class="categories">Posted under <?php the_category(', '); ?></aside>
 
   <div class="shareaholic-like-buttonset clearfix">
     <a class="shareaholic-googleplusone" shr_size="standard" shr_count="no"

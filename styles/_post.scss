@@ -51,6 +51,10 @@ article.post .post-body {
   font-size: 14px;
   color: #222;
 
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 25px;
+  }
+
   p {
     line-height: 24px;
     margin: 15px 0;
@@ -62,6 +66,10 @@ article.post .post-body {
     line-height: 16px;
     margin: 0 10px 0 0;
     padding: 0 25px;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   // Images.
@@ -107,6 +115,36 @@ article.post .post-body {
   pre, code {
     font-size: 13px;
   }
+
+  // Plugins
+  // Syntax Highlighter.
+  .syntaxhighlighter {
+    @include border-radius(2px);
+    border: 1px solid $color-prim-light;
+    padding: 5px;
+  }
+
+  // jQuery Footnotes.
+  #footnote-list {
+    color: #666;
+    font-size: 13px;
+    margin: 0 -40px;
+    padding: 20px 40px;
+    ol {
+      margin: 0 10px;
+      li {
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+article.post .categories {
+  text-align: right;
+  font-family: $font-gothic;
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 .share-this {
@@ -122,4 +160,10 @@ article.post .post-body {
   border-top: 1px solid #ccc;
   padding-top: 15px;
   margin: 20px 0 10px;
+}
+
+body div#footnotediv {
+  @include border-radius(5px);
+  background-color: #222;
+  border: 1px solid $color-prim-light;
 }
