@@ -23,6 +23,7 @@
       </a>
     </li>
     <?php endforeach; ?>
+    <?php wp_reset_query(); ?>
   </ul>
 </section>
 
