@@ -1,4 +1,4 @@
-<section id="recent">
+<section id="recent" class="post-links">
   <h1>ac.recent</h1>
   <ul>
     <?php
@@ -26,3 +26,9 @@
   </ul>
 </section>
 
+<?php if (is_home() || is_single()): ?>
+<section id="related" class="post-links">
+  <h1>ac.related</h1>
+  <?php related_posts(); ?>
+</section>
+<?php endif; ?>

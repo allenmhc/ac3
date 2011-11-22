@@ -416,7 +416,8 @@ header#site-header {
       bottom: 80px; }
 
 article.post {
-  margin: 40px; }
+  margin: 40px;
+  min-height: 500px; }
   article.post .post-title {
     float: left;
     margin: 0 20px 20px 0px;
@@ -564,6 +565,8 @@ footer {
 #beta {
   margin-top: 40px;
   font-family: museo-sans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif; }
+  #beta section {
+    margin-bottom: 20px; }
   #beta h1 {
     font-size: 22px;
     font-weight: normal;
@@ -576,23 +579,40 @@ footer {
     padding: 5px 0;
     line-height: 18px; }
 
-#recent li {
+section.post-links li {
   margin-bottom: 5px;
   overflow: hidden; }
-#recent .post:hover {
+section.post-links .post:hover {
   color: #96b0c9; }
-  #recent .post:hover .sidebar-post-title {
+  section.post-links .post:hover .sidebar-post-title {
     -webkit-box-shadow: 0px 2px 3px rgba(150, 176, 201, 0.5);
     -moz-box-shadow: 0px 2px 3px rgba(150, 176, 201, 0.5);
     box-shadow: 0px 2px 3px rgba(150, 176, 201, 0.5); }
-#recent .post .sidebar-post-title {
+section.post-links .post .sidebar-post-title {
   font-family: "Century Gothic", Verdana, Helvetica, Arial, sans-serif;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding-bottom: 3px; }
-#recent .post .sidebar-post-metadata {
+section.post-links .post .sidebar-post-metadata {
   font-size: 12px;
   padding-top: 3px;
   color: #859fb8; }
-#recent .post .sidebar-post-categories {
+section.post-links .post .sidebar-post-categories {
   color: #aaa;
   float: right; }
+
+#related {
+  -webkit-box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-border-top-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-background-clip: padding-box;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px 20px 20px 39px;
+  margin-left: -39px;
+  margin-right: -20px; }

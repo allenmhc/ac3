@@ -7,6 +7,10 @@
   margin-top: 40px;
   font-family: $font-default;
 
+  section {
+    margin-bottom: 20px;
+  }
+
   h1 {
     font-size: 22px;
     font-weight: normal;
@@ -25,7 +29,7 @@
   }
 }
 
-#recent {
+section.post-links {
   li {
     margin-bottom: 5px;
     overflow: hidden;
@@ -53,4 +57,14 @@
       float: right;
     }
   }
+}
+
+#related {
+  @include box-shadow(2px 1px 3px rgba(0, 0, 0, 0.3));
+  @include border-radius-side('top', 'right', 5px);
+  @include border-radius-side('bottom', 'right', 5px);
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px 20px 20px 40px - 1px;
+  margin-left: -40px + 1px;
+  margin-right: -20px;
 }
