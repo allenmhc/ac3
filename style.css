@@ -304,14 +304,7 @@ header#site-header {
 
 #beta {
   width: 240px;
-  float: right;
-  font-family: "Century Gothic", Verdana, Helvetica, Arial, sans-serif; }
-  #beta li {
-    text-align: right;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    line-height: 20px; }
+  float: right; }
 
 footer {
   width: 960px;
@@ -566,3 +559,39 @@ footer {
   font-size: 11px; }
   footer #copyright {
     text-align: center; }
+
+#beta {
+  margin-top: 40px;
+  font-family: museo-sans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif; }
+  #beta h1 {
+    font-size: 22px;
+    font-weight: normal;
+    font-family: "Raleway", sans-serif;
+    color: #699a88;
+    margin-bottom: 10px; }
+  #beta ul {
+    list-style: none; }
+  #beta li {
+    padding: 5px 0;
+    line-height: 18px; }
+
+#recent li {
+  margin-bottom: 5px;
+  overflow: hidden; }
+#recent .post:hover {
+  color: #96b0c9; }
+  #recent .post:hover .sidebar-post-title {
+    -webkit-box-shadow: 0px 2px 3px rgba(150, 176, 201, 0.5);
+    -moz-box-shadow: 0px 2px 3px rgba(150, 176, 201, 0.5);
+    box-shadow: 0px 2px 3px rgba(150, 176, 201, 0.5); }
+#recent .post .sidebar-post-title {
+  font-family: "Century Gothic", Verdana, Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 3px; }
+#recent .post .sidebar-post-metadata {
+  font-size: 12px;
+  padding-top: 3px;
+  color: #859fb8; }
+#recent .post .sidebar-post-categories {
+  color: #aaa;
+  float: right; }

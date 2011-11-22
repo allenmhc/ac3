@@ -17,7 +17,9 @@ global $wp_query;
   ?>
 </div>
 
-<div id="beta"></div>
+<div id="beta">
+  <?php get_sidebar(); ?>
+</div>
 
 <?php
   get_footer();

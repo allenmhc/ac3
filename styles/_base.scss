@@ -20,7 +20,7 @@ a, a:active, a:visited {
   color: $color-link;
   text-decoration: none;
   &:hover {
-    color: $color-link + #224;
+    color: $color-sec - #111;
   }
 }
 

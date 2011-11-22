@@ -1,0 +1,56 @@
+// Sidebar styles.
+
+@import "config";
+@import "mixins";
+
+#beta {
+  margin-top: 40px;
+  font-family: $font-default;
+
+  h1 {
+    font-size: 22px;
+    font-weight: normal;
+    font-family: $font-raleway;
+    color: $color-ter-dark;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    padding: 5px 0;
+    line-height: 18px;
+  }
+}
+
+#recent {
+  li {
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
+
+  .post {
+    &:hover {
+      color: $color-link + #222;
+      .sidebar-post-title {
+        @include box-shadow(0px 2px 3px rgba(150, 176, 201, 0.5));
+      }
+    }
+    .sidebar-post-title {
+      font-family: $font-gothic;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      padding-bottom: 3px;
+    }
+    .sidebar-post-metadata {
+      font-size: 12px;
+      padding-top: 3px;
+      color: $color-link + #111;
+    }
+    .sidebar-post-categories {
+      color: #aaa;
+      float: right;
+    }
+  }
+}
