@@ -1,7 +1,7 @@
 <article class="post">
 
   <header class="post-title">
-    <h1><?php the_title(); ?></h1>
+    <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
     <div class="metainfo">
       <time datetime="<?php echo get_the_date('Y-m-d'); ?>" pubdate="pubdate">
         <?php echo get_the_date('M j, Y'); ?>

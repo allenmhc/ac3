@@ -21,6 +21,9 @@ article.post {
         size: 22px;
         weight: bold;
       }
+      a:hover {
+        color: $color-prim-light;
+      }
     }
     .metainfo {
       font-family: $font-gothic;
@@ -145,7 +148,6 @@ article.post .categories {
   font-family: $font-gothic;
   font-size: 13px;
   a:hover {
-    color: $color-sec-light;
     border-bottom: 1px solid $color-sec-light;
   }
 }

@@ -275,7 +275,7 @@ a, a:active, a:visited {
   color: #748ea7;
   text-decoration: none; }
   a:hover, a:active:hover, a:visited:hover {
-    color: #96b0eb; }
+    color: #af9c5a; }
 
 ul {
   margin-left: 0; }
@@ -432,6 +432,8 @@ article.post {
       font-family: "Raleway", sans-serif;
       font-size: 22px;
       font-weight: bold; }
+      article.post .post-title h1 a:hover {
+        color: #a1afbd; }
     article.post .post-title .metainfo {
       font-family: "Century Gothic", Verdana, Helvetica, Arial, sans-serif;
       padding-top: 5px;
@@ -518,7 +520,6 @@ article.post .categories {
   font-family: "Century Gothic", Verdana, Helvetica, Arial, sans-serif;
   font-size: 13px; }
   article.post .categories a:hover {
-    color: #bfb494;
     border-bottom: 1px solid #bfb494; }
 
 .share-this {

@@ -25,7 +25,7 @@
 <body>
   <header id="site-header">
     <div id="header-content">
-      <a id="header-title" href="<?php get_home_url(); ?>">
+      <a id="header-title" href="<?php echo get_home_url(); ?>">
         <h1><?php bloginfo('name'); ?></h1>
         <h3 id="subheader"><?php bloginfo('description'); ?></h3>
       </a>
