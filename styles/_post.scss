@@ -69,7 +69,8 @@ article.post .post-body {
   }
 
   a:hover {
-    text-decoration: underline;
+    color: $color-sec-light;
+    border-bottom: 1px solid $color-sec-light;
   }
 
   // Images.
@@ -142,8 +143,10 @@ article.post .post-body {
 article.post .categories {
   text-align: right;
   font-family: $font-gothic;
+  font-size: 13px;
   a:hover {
-    text-decoration: underline;
+    color: $color-sec-light;
+    border-bottom: 1px solid $color-sec-light;
   }
 }
 
@@ -156,14 +159,26 @@ article.post .categories {
   margin: 20px auto 0
 }
 
+.post-footer {
+  padding-bottom: 15px;
+  &.has-comments {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
 #comments {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 15px;
-  margin: 20px 0 10px;
 }
 
 body div#footnotediv {
-  @include border-radius(5px);
-  background-color: #222;
-  border: 1px solid $color-prim-light;
+  @include border-radius(3px);
+  @include box-shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
+  background-color: #fafafa;
+  color: #666;
+  max-width: 300px;
+}
+
+.categories {
+  color: #222;
 }

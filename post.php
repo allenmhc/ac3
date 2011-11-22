@@ -8,6 +8,7 @@
       </time>
     </div>
   </header>
+
   <div class="post-body">
     <?php
       global $more;
@@ -16,17 +17,21 @@
     ?>
   </div>
 
-  <aside class="categories">Posted under <?php the_category(', '); ?></aside>
+  <div class="post-footer <?php echo (is_single() ? "has-comments" : ""); ?>">
+    <aside class="categories">Posted under <?php the_category(', '); ?></aside>
 
-  <div class="shareaholic-like-buttonset clearfix">
-    <a class="shareaholic-googleplusone" shr_size="standard" shr_count="no"
-        shr_href="<?php the_permalink(); ?>"></a>
-    <a class="shareaholic-fblike" shr_layout="standard" shr_showfaces="false"
-        shr_href="<?php the_permalink(); ?>"></a>
+    <div class="shareaholic-like-buttonset clearfix">
+      <a class="shareaholic-googleplusone" shr_size="standard" shr_count="no"
+          shr_href="<?php the_permalink(); ?>"></a>
+      <a class="shareaholic-fblike" shr_layout="standard" shr_showfaces="false"
+          shr_href="<?php the_permalink(); ?>"></a>
+    </div>
   </div>
 
+  <?php if (is_single()): ?>
   <div class="comments" name="comments" id="comments">
     <?php comments_template(); ?>
   </div>
+  <?php endif; ?>
 
 </article>
