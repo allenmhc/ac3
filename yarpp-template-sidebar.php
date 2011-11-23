@@ -7,7 +7,7 @@ Author: Allen Cheung
 <ul>
 	<?php while ($related_query->have_posts()) : $related_query->the_post(); ?>
   <li>
-    <a href="<?php the_permalink(); ?>" rel="bookmark">
+    <a class="post" href="<?php the_permalink(); ?>" rel="bookmark">
       <div class="sidebar-post-title"><?php the_title(); ?></div>
       <div class="sidebar-post-metadata">
         <?php echo date('M j', strtotime(get_the_date())); ?>
