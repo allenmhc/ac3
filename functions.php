@@ -21,7 +21,7 @@ function ac3_images_dir() {
 
 /* Filters */
 function new_excerpt_length($length) {
-	return 18;
+	return 25;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 function new_excerpt_more($more) {
