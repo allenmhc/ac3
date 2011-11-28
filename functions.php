@@ -11,6 +11,10 @@ function ac3_post() {
 function ac3_is_page($page_name) {
   return get_page_by_title($page_name)->ID == get_the_ID();
 }
+
+function ac3_images_dir() {
+  echo get_bloginfo('template_directory') . '/images';
+}
 ?>
 
 <?php

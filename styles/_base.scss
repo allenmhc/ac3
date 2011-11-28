@@ -1,6 +1,7 @@
 // Base styles.
 
 @import "config";
+@import "mixins";
 
 body {
   background: url(images/noise.png) repeat;
@@ -26,4 +27,13 @@ a, a:active, a:visited {
 
 ul {
   margin-left: 0;
+}
+
+#coffee-404 {
+  @include box-shadow(0px 2px 2px rgba(0, 0, 0, 0.4));
+  @include border-radius(5px);
+  background: url('images/coffee.jpg') no-repeat;
+  margin: 40px auto;
+  width: 600px;
+  height: 401px;
 }

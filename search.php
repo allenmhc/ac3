@@ -9,6 +9,7 @@ global $wp_query;
 ?>
 
 <div id="alpha">
+<?php if ( have_posts() ) : ?>
   <?php
   while (have_posts()):
     the_post();
@@ -28,6 +29,14 @@ global $wp_query;
     </div>
   </article>
   <?php endwhile; ?>
+<?php else: ?>
+  <article class="post" id="no-search-results">
+    <div class="post-body">
+      <p>Sorry, couldn't find anything. Here's a latte for your troubles.</p>
+      <div id="coffee-404" />
+    </div>
+  </article>
+<?php endif;?>
 </div>
 
 <div id="beta">

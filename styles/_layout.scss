@@ -17,6 +17,18 @@ header#site-header {
   margin: 100px auto 40px;
 }
 
+#page-404, #no-search-results {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#page-404 {
+  p {
+    margin: 0 40px 10px;
+    font-size: 16px;
+  }
+}
+
 #alpha {
   @include box-shadow(0px 1px 3px rgba(0, 0, 0, 0.3));
   @include border-radius(5px);
