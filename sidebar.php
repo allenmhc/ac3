@@ -1,3 +1,19 @@
+<?php if (!ac3_is_page("About")): ?>
+<section id="search-form">
+  <?php get_search_form(); ?>
+  <?php if (is_search()): ?>
+    <?php
+      global $wp_query;
+      $total_results = $wp_query->found_posts;
+    ?>
+    <aside id="search-info">
+      <?php echo $total_results; ?> post<?php echo ($total_results == 1) ? "" : "s" ?> found.
+    </aside>
+    <?php wp_reset_query(); ?>
+  <?php endif; ?>
+</section>
+<?php endif; ?>
+
 <section id="recent" class="post-links">
   <h1>ac.recent</h1>
   <ul>

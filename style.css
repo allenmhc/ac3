@@ -562,6 +562,42 @@ footer {
   footer #copyright {
     text-align: center; }
 
+#searchform {
+  position: relative; }
+  #searchform #search {
+    -moz-border-top-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-background-clip: padding-box;
+    -moz-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-background-clip: padding-box;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    margin: 0 0 10px -39px;
+    padding: 5px 0 5px 39px;
+    overflow: hidden;
+    border: none;
+    width: 240px;
+    background: rgba(192, 173, 107, 0.4); }
+    #searchform #search, #searchform #search::-webkit-input-placeholder, #searchform #search::-moz-placeholder {
+      color: #666; }
+  #searchform #searchsubmit {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 16px; }
+
+#search-info {
+  color: #999;
+  font-size: 12px;
+  text-align: right; }
+
 #beta {
   margin-top: 40px;
   font-family: museo-sans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif; }
