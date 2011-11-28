@@ -300,7 +300,8 @@ header#site-header {
   -webkit-background-clip: padding-box;
   background: rgba(255, 255, 255, 0.3);
   width: 680px;
-  float: left; }
+  float: left;
+  min-height: 500px; }
 
 #beta {
   width: 240px;
@@ -416,8 +417,7 @@ header#site-header {
       bottom: 80px; }
 
 article.post {
-  margin: 40px;
-  min-height: 500px; }
+  margin: 40px; }
   article.post .post-title {
     float: left;
     margin: 0 20px 20px 0px;
@@ -453,6 +453,12 @@ article.post {
         margin-right: 0; }
       article.post .post-categories li:hover {
         border-bottom: 1px dotted #999999; }
+  article.post .more-link {
+    padding-left: 5px; }
+    article.post .more-link:hover {
+      border: none !important; }
+    article.post .more-link img {
+      width: 8px; }
 
 article.post .post-body {
   font-size: 14px;

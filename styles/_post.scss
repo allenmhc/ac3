@@ -5,7 +5,6 @@
 
 article.post {
   margin: 40px;
-  min-height: 500px;
 
   .post-title {
     float: left;
@@ -47,6 +46,14 @@ article.post {
       &:hover {
         border-bottom: 1px dotted $category-color;
       }
+    }
+  }
+
+  .more-link {
+    padding-left: 5px;
+    &:hover { border: none !important; }
+    img {
+      width: 8px;
     }
   }
 }
