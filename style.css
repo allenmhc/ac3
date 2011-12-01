@@ -555,6 +555,8 @@ article.post .post-body {
   article.post .post-body p {
     line-height: 24px;
     margin: 15px 0; }
+    article.post .post-body p sup {
+      line-height: 0; }
   article.post .post-body blockquote {
     border-left: 1px solid #a1afbd;
     font-size: 12px;
