@@ -12,6 +12,12 @@
   box-shadow: $args;
 }
 
+@mixin box-shadows($arg1, $arg2) {
+  -webkit-box-shadow: $arg1, $arg2;
+  -moz-box-shadow: $arg1, $arg2;
+  box-shadow: $arg1, $arg2;
+}
+
 @mixin text-shadow($args) {
   -webkit-text-shadow: $args;
   -moz-text-shadow: $args;
