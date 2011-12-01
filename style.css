@@ -268,7 +268,7 @@ body {
   background: url(images/noise.png) repeat;
   color: #666;
   font-size: 14px;
-  font-family: museo-sans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
   font-weight: normal; }
 
 a, a:active, a:visited {
@@ -693,7 +693,7 @@ footer {
 
 #beta {
   margin-top: 40px;
-  font-family: museo-sans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif; }
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif; }
   #beta section {
     margin-bottom: 20px; }
   #beta h1 {
