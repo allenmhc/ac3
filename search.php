@@ -31,7 +31,6 @@ global $wp_query;
   <?php endwhile; ?>
 
   <?php
-    // $posts_per_page = get_query_var('posts_per_page');
     $paged = get_query_var('paged');
     $max_pages = $wp_query->max_num_pages;
     $curr_link = get_pagenum_link($paged);

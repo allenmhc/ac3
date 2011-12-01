@@ -53,6 +53,14 @@
   transition: $args;
 }
 
+@mixin rotate($degs) {
+  -moz-transform: rotate($degs);
+  -webkit-transform: rotate($degs);
+  -o-transform: rotate($degs);
+  -ms-transform: rotate($degs);
+  transform: rotate($degs);
+}
+
 @mixin img-zoom($seconds: 0.2, $scale: 1.2) {
   -webkit-transition: -webkit-transform #{$seconds}s ease-in-out;
   -moz-transition: -moz-transform #{$seconds}s ease-in-out;
