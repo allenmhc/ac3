@@ -49,5 +49,15 @@ footer {
 }
 
 #footer-alpha {
+  float: left;
   width: 680px;
 }
+
+#footer-beta {
+  float: right;
+  width: 960px - 680px - 40px;
+  img {
+    margin-right: 5px;
+  }
+}
+
