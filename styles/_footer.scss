@@ -11,17 +11,6 @@ footer {
   position: relative;
 }
 
-#copyright {
-  font-family: $font-gothic;
-  font-size: 11px;
-  text-align: center;
-  position: absolute;
-  color: #999;
-  top: 150px;
-  left: 340px;
-}
-
-
 #footer-pic-thumb {
   @include transition(all 200ms linear);
   float: left;
@@ -39,6 +28,24 @@ footer {
   display: block;
   color: #666;
   line-height: 24px;
-  width: 480px;
-  &:hover { color: #666; }
+  width: 320px;
+  float: left;
+  &:hover {
+    color: #777;
+    strong { text-decoration: underline; }
+  }
+}
+
+#footer-meta {
+  float: right;
+  padding: 0 40px 0 40px;
+  border-left: 1px solid rgba(64, 64, 64, 0.2);
+  text-align: center;
+}
+
+#copyright {
+  font-family: $font-gothic;
+  font-size: 11px;
+  color: #999;
+  margin-top: 10px;
 }

@@ -14,7 +14,7 @@ header#site-header {
 
 #content {
   width: $site-width;
-  margin: 100px auto 40px;
+  margin: 100px auto 30px;
 }
 
 #page-404, #no-search-results {
@@ -46,4 +46,8 @@ header#site-header {
 footer {
   width: $site-width;
   margin: 0 auto;
+}
+
+#footer-alpha {
+  width: 680px;
 }
