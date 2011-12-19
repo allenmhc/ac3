@@ -715,7 +715,15 @@ footer {
     float: right;
     margin-left: 8px; }
     #elsewhere li img {
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      -webkit-background-clip: padding-box;
       width: 32px; }
+      #elsewhere li img:hover {
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6); }
 
 #searchform {
   position: relative; }

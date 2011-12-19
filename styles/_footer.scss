@@ -15,7 +15,6 @@ footer {
   @include transition(all 200ms linear);
   float: left;
   margin: 0 10px 5px 0;
-  //display: inline-block;
   margin: -60px 0 0 30px;
   cursor: pointer;
   &:hover {
@@ -57,7 +56,11 @@ footer {
     float: right;
     margin-left: 8px;
     img {
+      @include border-radius(8px);
       width: 32px;
+      &:hover {
+        @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.6));
+      }
     }
   }
 }
