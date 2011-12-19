@@ -15,13 +15,10 @@ function ac3_is_page($page_name) {
 function ac3_images_dir() {
   echo get_bloginfo('template_directory') . '/images';
 }
-?>
-
-<?php
 
 /* Filters */
 function new_excerpt_length($length) {
-	return 25;
+	return 60;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 function new_excerpt_more($more) {

@@ -659,6 +659,9 @@ body div#footnotediv {
 .categories {
   color: #222; }
 
+article.post .search-post-title {
+  width: 350px; }
+
 footer {
   color: #666;
   margin: 0 auto 100px;

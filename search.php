@@ -15,7 +15,7 @@ global $wp_query;
     the_post();
   ?>
   <article class="post clearfix">
-    <header class="post-title">
+    <header class="post-title search-post-title">
       <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
       <div class="metainfo">
         <time datetime="<?php echo get_the_date('Y-m-d'); ?>" pubdate="pubdate">
