@@ -379,8 +379,6 @@ header#site-header {
     z-index: 10; }
   #header-title:hover h1 {
     color: #fff; }
-  #header-title:hover h3 {
-    left: 80px; }
   #header-title h3 {
     -webkit-text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4);
     -moz-text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4);
@@ -393,10 +391,10 @@ header#site-header {
     font-weight: 100;
     position: absolute;
     bottom: 0;
-    left: -500px;
+    left: 80px;
     line-height: 38px;
     letter-spacing: 2px;
-    font-size: 14px;
+    font-size: 16px;
     color: #222; }
 
 #header-nav {
