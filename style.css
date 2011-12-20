@@ -363,7 +363,8 @@ header#site-header {
   top: 0;
   height: 60px;
   clear: both;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 100; }
 
 #header-title {
   display: block;
@@ -518,19 +519,29 @@ header#site-header {
       filter: alpha(opacity=70);
       background-image: none; }
 
-.article-cat {
-  margin: 40px; }
-  .article-cat .cat-title a {
-    -webkit-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-    -moz-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-    font-size: 22px;
-    font-weight: bold;
-    font-family: "Raleway", sans-serif;
-    color: #699a88;
-    margin-bottom: 10px; }
-  .article-cat ul {
-    list-style: none; }
+.info-icon:after {
+  content: url(images/info-icon.png);
+  width: 16px;
+  height: 16px;
+  cursor: pointer; }
+.info-icon p {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  display: none;
+  position: absolute;
+  width: 300px;
+  right: 30px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ddd;
+  padding: 8px 15px; }
+.info-icon:hover p {
+  display: block; }
 
 article.post {
   margin: 40px; }
@@ -841,3 +852,41 @@ section.post-links .post .sidebar-post-categories {
   margin-left: -39px;
   margin-right: -20px;
   overflow: hidden; }
+
+/* Page styles. */
+.articles-page {
+  position: relative; }
+
+#article-info {
+  position: absolute;
+  right: 16px;
+  top: 16px; }
+
+.article-cat {
+  margin: 40px 0; }
+  .article-cat .cat-title {
+    border-bottom: 1px solid #bfb494;
+    width: 200px;
+    display: inline-block;
+    padding-bottom: 2px;
+    margin-left: 40px;
+    margin-right: 40px; }
+    .article-cat .cat-title a {
+      -webkit-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+      -moz-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+      font-size: 18px;
+      font-weight: bold;
+      font-family: "Raleway", sans-serif;
+      color: #aaa;
+      margin-bottom: 10px; }
+  .article-cat .articles {
+    list-style: none;
+    padding-top: 5px;
+    font-family: "Century Gothic", Verdana, Helvetica, Arial, sans-serif;
+    line-height: 20px;
+    font-size: 14px; }
+    .article-cat .articles .article {
+      float: left;
+      margin: 5px 40px;
+      width: 260px; }

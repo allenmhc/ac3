@@ -1,0 +1,52 @@
+/* Page styles. */
+
+@import "config";
+@import "mixins";
+
+.articles-page {
+  position: relative;
+}
+
+#article-info {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.article-cat {
+  margin: 40px 0;
+
+  .cat-title {
+    border-bottom: 1px solid $color-sec-light;
+    width: 200px;
+    display: inline-block;
+    padding-bottom: 2px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    a {
+      @include text-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+      font-size: 18px;
+      font-weight: bold;
+      font-family: $font-raleway;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+  }
+
+  .articles {
+    list-style: none;
+    padding-top: 5px;
+    font-family: $font-gothic;
+    line-height: 20px;
+    font-size: 14px;
+
+    .article {
+      float: left;
+      margin: 5px 40px;
+      width: 260px;
+    }
+  }
+
+}
+
