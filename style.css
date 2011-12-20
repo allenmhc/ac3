@@ -264,11 +264,18 @@ button {
   h2, h3 {
     page-break-after: avoid; } }
 
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("fonts/proximanova-regular.eot");
+  src: local("â˜º"), url("fonts/proximanova-regular.woff") format("woff"), url("fonts/proximanova-regular.ttf") format("truetype"), url("fonts/proximanova-regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   background: url(images/noise.png) repeat;
   color: #666;
   font-size: 14px;
-  font-family: "PT Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+  font-family: "Proxima Nova", "PT Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
   font-weight: normal; }
 
 a, a:active, a:visited {
@@ -511,6 +518,20 @@ header#site-header {
       filter: alpha(opacity=70);
       background-image: none; }
 
+.article-cat {
+  margin: 40px; }
+  .article-cat .cat-title a {
+    -webkit-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    -moz-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+    color: #699a88;
+    margin-bottom: 10px; }
+  .article-cat ul {
+    list-style: none; }
+
 article.post {
   margin: 40px; }
   article.post .post-title {
@@ -722,9 +743,9 @@ footer {
       -webkit-background-clip: padding-box;
       width: 32px; }
       #elsewhere li img:hover {
-        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
-        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6); }
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.6); }
 
 #searchform {
   position: relative; }
@@ -764,7 +785,7 @@ footer {
 
 #beta {
   margin-top: 40px;
-  font-family: "PT Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif; }
+  font-family: "Proxima Nova", "PT Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif; }
   #beta section {
     margin-bottom: 20px; }
   #beta h1 {
