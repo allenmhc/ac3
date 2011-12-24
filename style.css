@@ -854,7 +854,8 @@ section.post-links .post .sidebar-post-categories {
   overflow: hidden; }
 
 /* Page styles. */
-.articles-page {
+.articles-page,
+.archives-page {
   position: relative; }
 
 #article-info {
