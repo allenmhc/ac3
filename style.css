@@ -754,9 +754,9 @@ footer {
       -webkit-background-clip: padding-box;
       width: 32px; }
       #elsewhere li img:hover {
-        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
-        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.6); }
+        -webkit-box-shadow: 0 0 8px #c0ad6b;
+        -moz-box-shadow: 0 0 8px #c0ad6b;
+        box-shadow: 0 0 8px #c0ad6b; }
 
 #searchform {
   position: relative; }
@@ -872,12 +872,10 @@ section.post-links .post .sidebar-post-categories {
     margin-left: 40px;
     margin-right: 40px; }
     .article-cat .cat-title a {
-      -webkit-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-      -moz-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-      font-size: 18px;
-      font-weight: bold;
+      font-size: 20px;
+      font-weight: normal;
       font-family: "Raleway", sans-serif;
+      letter-spacing: 1px;
       color: #aaa;
       margin-bottom: 10px; }
   .article-cat .articles {
