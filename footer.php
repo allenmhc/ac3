@@ -57,7 +57,8 @@
 </body>
 
 <?php function scripts_dir() { echo get_bloginfo('template_directory') . '/scripts'; } ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/lib/jquery-1.7.1.min.js">\x3C/script>')</script>
 <script src="<?php scripts_dir(); ?>/lib/underscore.js"></script>
 <script src="<?php scripts_dir(); ?>/lib/date.js"></script>
 <script src="<?php scripts_dir(); ?>/index.js"></script>
