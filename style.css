@@ -347,7 +347,7 @@ footer {
   float: right;
   width: 240px; }
   #footer-beta img {
-    margin-right: 5px; }
+    margin-left: 5px; }
 
 header#site-header {
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
