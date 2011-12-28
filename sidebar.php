@@ -55,7 +55,7 @@
 <?php if (ac3_is_archives()): ?>
 <section id="archives-chrono" class="post-links">
   <h1>ac.chrono</h1>
-  <ul id="archives-chrono" class="post-list">
+  <ul class="post-list">
     <?php
     $end_posts_dates = ac3_find_cap_posts_dates();
     $queried_year = get_query_var('year');
@@ -65,8 +65,8 @@
     for ($year = $end_posts_dates['newest_year']; $year >= $end_posts_dates['oldest_year']; $year -= 1):
     ?>
     <li>
-      <a href="#" class="chrono-year"><h4><?php echo $year; ?></h4></a>
-      <div class="year-post-list <?php if ($year != $queried_year) { ?>hidden<?php } ?>">
+      <h4><a href="#" class="chrono-year"><?php echo $year; ?></a></h4>
+      <div class="year-post-list <?php if ($year != $queried_year) { ?>collapsed<?php } ?>">
         <?php
         $years_posts = ac3_find_posts_by_year($year);
         for ($month = count($years_posts); $month > 0; $month -= 1):
@@ -75,7 +75,7 @@
           $months_posts = $years_posts[$month-1];
           if (count($months_posts) > 0):
           ?>
-          <a href="<?php echo get_month_link($year, $month); ?>">
+          <a href="<?php echo get_month_link($year, $month); ?>" class="month-posts-link">
             <div class="month-name"><?php echo ac3_get_month_name($month); ?></div>
             <div class="mini-posts-wrapper">
               <ul class="mini-posts">

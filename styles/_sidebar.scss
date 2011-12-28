@@ -101,3 +101,63 @@ section.post-links {
   margin-right: -20px;
   overflow: hidden;
 }
+
+#beta .post-list {
+  margin-bottom: 5px;
+
+  .chrono-year {
+    @include text-shadow(0 -1px 1px rgba(255, 255, 255, 0.7));
+    color: #999;
+    font-family: $font-gothic;
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #bbb;
+    width: 180px;
+    display: block;
+  }
+
+  .year-post-list {
+    margin-left: 10px;
+    overflow: hidden;
+    &.collapsed {
+      display: none;
+    }
+  }
+
+  .month-name {
+    color: $color-sec;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .mini-posts-wrapper {
+    border-left: 1px solid $color-prim-light;
+    margin-left: 4px;
+  }
+
+  .mini-posts {
+    font-size: 6px;
+    margin: 0 0 0 5px;
+    padding: 3px 0;
+    color: #999;
+    li {
+      padding: 0;
+      margin: 0 0 3px;
+      line-height: 4px;
+    }
+  }
+
+  .month-posts-link:hover {
+    .month-name {
+      color: $color-sec-light;
+    }
+    .mini-posts-wrapper {
+      @include box-shadow(inset 4px 0 4px -3px $color-prim-light);
+    }
+    .mini-posts {
+      @include text-shadow(0 0px 5px #666);
+    }
+  }
+}
