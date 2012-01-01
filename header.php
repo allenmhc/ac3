@@ -33,11 +33,12 @@
       <?php function page_link($page) { echo get_permalink(get_page_by_title($page)->ID); } ?>
       <?php
         function selected_page($page) {
-          if ((is_month() || is_day() || is_year()) && $page == 'archives') {
+          if (ac3_is_archives() && $page == 'Archives') {
             echo 'selected';
-            return;
+          } else {
+            echo (ac3_is_page($page)) ? 'selected' : '';
           }
-          echo (get_page_by_title($page)->ID == get_the_ID() ? 'selected' : ''); }
+        }
         ?>
       <nav id="header-nav">
         <ul>
@@ -47,17 +48,17 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="<?php selected_page('articles'); ?>" href="<?php page_link('articles'); ?>">
+            <a class="<?php selected_page('Articles'); ?>" href="<?php page_link('articles'); ?>">
               <h4>articles</h4><span class="subtext">noteworthy</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="<?php selected_page('archives'); ?>" href="<?php page_link('archives'); ?>">
+            <a class="<?php selected_page('Archives'); ?>" href="<?php page_link('archives'); ?>">
               <h4>archives</h4><span class="subtext">thoughtstream</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="<?php selected_page('about'); ?>" href="<?php page_link('about'); ?>" rel="author">
+            <a class="<?php selected_page('About'); ?>" href="<?php page_link('about'); ?>" rel="author">
               <h4>about</h4><span class="subtext">identity</span>
             </a>
           </li>
