@@ -28,6 +28,7 @@ footer {
   color: #666;
   line-height: 24px;
   width: 320px;
+  margin-left: 10px;
   float: left;
   &:hover {
     color: #777;
@@ -37,7 +38,7 @@ footer {
 
 #footer-meta {
   float: right;
-  padding: 0 40px 0 40px;
+  padding: 0 20px;
   border-left: 1px solid rgba(64, 64, 64, 0.2);
   text-align: center;
 }
