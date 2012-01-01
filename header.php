@@ -19,6 +19,10 @@
   <script src="<?php echo get_bloginfo('template_directory'); ?>/scripts/lib/modernizr-1.6.min.js"></script>
   <script src="http://use.typekit.com/eyp5dlm.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="scripts/lib/jquery-1.7.1.min.js">\x3C/script>')</script>
+
   <?php wp_head(); ?>
 </head>
 
