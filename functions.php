@@ -15,7 +15,7 @@ function ac3_is_articles() {
   return ac3_is_page('Articles');
 }
 function ac3_is_archives() {
-  return ac3_is_page('Archives') || is_month() || is_day() || is_year();
+  return ac3_is_page('Archives') || is_category() || is_month() || is_day() || is_year();
 }
 function ac3_is_about() {
   return ac3_is_page('About');

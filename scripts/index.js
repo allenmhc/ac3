@@ -24,4 +24,12 @@
       );
     }
   });
+
+  $("#archives-toggle").click(function(e) {
+    e.preventDefault();
+    var $archives = $("#archives");
+    var height = ($archives.hasClass("show-category")) ? 'auto' : $("#archives-category").outerHeight();
+    $archives.css('height', height);
+    $archives.toggleClass('show-category');
+  });
 })(jQuery);

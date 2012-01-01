@@ -161,3 +161,107 @@ section.post-links {
     }
   }
 }
+
+$archive-anim-duration: 300ms;
+#archives {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  h1 {
+    position: absolute;
+    overflow: hidden;
+    z-index: 101;
+    .category {
+      @include transition(padding-left $archive-anim-duration linear);
+      padding-left: 300px;
+    }
+  }
+
+  #archives-chrono,
+  #archives-category {
+    padding-top: 30px;
+    z-index: 10;
+  }
+
+  #archives-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 200;
+  }
+
+  #archives-chrono {
+    @include transition(opacity $archive-anim-duration linear);
+    @include opacity(1);
+  }
+
+  #archives-category {
+    @include transition(left $archive-anim-duration linear);
+    position: absolute;
+    top: 0;
+    left: 300px;
+    width: 100%;
+
+    .post-list {
+      margin-top: 10px;
+      li {
+        padding: 0;
+        margin-bottom: 5px;
+      }
+    }
+
+    .category {
+      display: block;
+      margin: 0 10px;
+      &:hover {
+        .category-name,
+        .category-count-bullets,
+        .category-count-words {
+          color: $color-sec !important;
+        }
+        .category-count-bullets { display: none; }
+        .category-count-words { display: block; }
+      }
+    }
+    .category-name {
+      color: #aaa;
+      text-align: left;
+      float: left;
+    }
+    .category-count {
+      float: right;
+    }
+    .category-count-bullets {
+      font-size: 8px;
+      line-height: 4px;
+      text-align: right;
+      display: inline-block;
+      vertical-align: middle;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .category-count-words {
+      display: none;
+    }
+  }
+
+  // Styles for when the category panel is showing.
+  &.show-category {
+    h1 {
+      .chrono {
+        display: none;
+      }
+      .category {
+        padding-left: 0;
+      }
+    }
+    #archives-chrono {
+      @include opacity(0);
+      position: absolute;
+      z-index: -1;
+    }
+    #archives-category {
+      left: 0;
+    }
+  }
+}
