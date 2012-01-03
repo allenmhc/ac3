@@ -843,7 +843,8 @@ section.post-links .post .sidebar-post-categories {
   color: #aaa;
   float: right; }
 
-#related {
+#related,
+#contact-me {
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
