@@ -32,4 +32,18 @@
     $archives.css('height', height);
     $archives.toggleClass('show-category');
   });
+
+  $("#contact-me").find("input, textarea")
+    .keydown(function(e) {
+      var $formElem = $(e.target);
+      $formElem.siblings("label, .reqtxt, .emailreqtxt").addClass("has-input");
+    })
+    .keyup(function(e) {
+      var $formElem = $(e.target);
+      if ($formElem.val().length > 0) {
+        $formElem.siblings("label, .reqtxt, .emailreqtxt").addClass("has-input");
+      } else {
+        $formElem.siblings("label, .reqtxt, .emailreqtxt").removeClass("has-input");
+      }
+    });
 })(jQuery);

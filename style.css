@@ -993,6 +993,101 @@ section.post-links .post .sidebar-post-categories {
   #archives.show-category #archives-category {
     left: 0; }
 
+#contact-me {
+  color: #666; }
+  #contact-me aside {
+    margin-bottom: 10px; }
+  #contact-me .cform.contact-me {
+    width: 100%; }
+    #contact-me .cform.contact-me .cf-ol {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      #contact-me .cform.contact-me .cf-ol li {
+        position: relative; }
+        #contact-me .cform.contact-me .cf-ol li input,
+        #contact-me .cform.contact-me .cf-ol li textarea {
+          -moz-border-radius: 3px;
+          -webkit-border-radius: 3px;
+          border-radius: 3px;
+          -webkit-background-clip: padding-box;
+          background-color: #eee;
+          border: 1px solid rgba(0, 0, 0, 0.3);
+          padding: 3px;
+          width: 232px; }
+        #contact-me .cform.contact-me .cf-ol li input:focus,
+        #contact-me .cform.contact-me .cf-ol li textarea:focus {
+          background-color: #f3f8f8; }
+        #contact-me .cform.contact-me .cf-ol li label {
+          position: absolute;
+          top: 9px;
+          left: 5px;
+          color: #aaa; }
+        #contact-me .cform.contact-me .cf-ol li .reqtxt,
+        #contact-me .cform.contact-me .cf-ol li .emailreqtxt {
+          color: #b69a9a;
+          font-size: 12px;
+          display: block;
+          text-align: right;
+          position: absolute;
+          top: 8px;
+          right: 5px; }
+        #contact-me .cform.contact-me .cf-ol li label.has-input,
+        #contact-me .cform.contact-me .cf-ol li .reqtxt.has-input,
+        #contact-me .cform.contact-me .cf-ol li .emailreqtxt.has-input {
+          display: none; }
+        #contact-me .cform.contact-me .cf-ol li.cf_li_err label {
+          color: #fff; }
+        #contact-me .cform.contact-me .cf-ol li.cf_li_err input,
+        #contact-me .cform.contact-me .cf-ol li.cf_li_err textarea {
+          background-color: rgba(192, 173, 107, 0.4); }
+    #contact-me .cform.contact-me .cf_hidden {
+      display: none;
+      visibility: hidden; }
+  #contact-me .cform input.sendbutton {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    background-image: linear-gradient(top, #b2c0ce 25%, #a1afbd);
+    background-image: -o-linear-gradient(top, #b2c0ce 25%, #a1afbd);
+    background-image: -moz-linear-gradient(top, #b2c0ce 25%, #a1afbd);
+    background-image: -webkit-linear-gradient(top, #b2c0ce 25%, #a1afbd);
+    background-image: -ms-linear-gradient(top, #b2c0ce 25%, #a1afbd);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -webkit-text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2);
+    -moz-text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2);
+    text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #666;
+    padding: 4px 0;
+    width: 100%; }
+    #contact-me .cform input.sendbutton:hover {
+      background-image: linear-gradient(top, #a1afbd, #a1afbd);
+      background-image: -o-linear-gradient(top, #a1afbd, #a1afbd);
+      background-image: -moz-linear-gradient(top, #a1afbd, #a1afbd);
+      background-image: -webkit-linear-gradient(top, #a1afbd, #a1afbd);
+      background-image: -ms-linear-gradient(top, #a1afbd, #a1afbd); }
+    #contact-me .cform input.sendbutton:active {
+      -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  #contact-me .cf_info.success,
+  #contact-me .cf_info.failure {
+    margin-top: 10px;
+    padding: 1px;
+    font-size: 12px; }
+  #contact-me .cf_info.success {
+    color: #666; }
+  #contact-me .cf_info.failure {
+    color: #b69a9a; }
+  #contact-me .linklove {
+    display: none;
+    visibility: hidden; }
+
 /* Page styles. */
 .articles-page,
 .archives-page {

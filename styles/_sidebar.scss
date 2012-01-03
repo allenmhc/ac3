@@ -265,3 +265,105 @@ $archive-anim-duration: 300ms;
     }
   }
 }
+
+$error-color: rgba(192, 173, 107, 0.4);
+#contact-me {
+  color: #666;
+
+  aside {
+    margin-bottom: 10px;
+  }
+
+  // Styling the generated CF form.
+  .cform.contact-me {
+    width: 100%;
+
+    .cf-ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        position: relative;
+
+        input,
+        textarea {
+          @include border-radius(3px);
+          background-color: #eee;
+          border: 1px solid rgba(0, 0, 0, 0.3);
+          padding: 3px;
+          width: 240px - 6px - 2px;
+        }
+        input:focus,
+        textarea:focus {
+          background-color: #f3f8f8;
+        }
+        label {
+          position: absolute;
+          top: 9px;
+          left: 5px;
+          color: #aaa;
+        }
+        .reqtxt,
+        .emailreqtxt {
+          color: #b69a9a;
+          font-size: 12px;
+          display: block;
+          text-align: right;
+          position: absolute;
+          top: 8px;
+          right: 5px;
+        }
+        label.has-input,
+        .reqtxt.has-input,
+        .emailreqtxt.has-input {
+          display: none;
+        }
+
+        &.cf_li_err {
+          label {
+            color: #fff;
+          }
+          input,
+          textarea {
+            background-color: $error-color;
+          }
+        }
+      }
+    }
+    .cf_hidden {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  .cform input.sendbutton {
+    $pl: $color-prim-light;
+    @include border-radius(3px);
+    @include linear-gradient(top, $pl + #111 25%, $pl);
+    @include box-shadows(inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05));
+    @include text-shadow(0 -1px 0 rgba(255, 255, 255, 0.2));
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #666;
+    padding: 4px 0;
+    width: 100%;
+    &:hover {
+      @include linear-gradient(top, $pl, $pl);
+    }
+    &:active {
+      @include box-shadows(inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05));
+    }
+  }
+  .cf_info.success,
+  .cf_info.failure {
+    margin-top: 10px;
+    padding: 1px;
+    font-size: 12px;
+  }
+  .cf_info.success { color: #666; }
+  .cf_info.failure { color: #b69a9a; }
+  .linklove {
+    display: none;
+    visibility: hidden;
+  }
+}

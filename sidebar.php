@@ -14,7 +14,7 @@
 </section>
 <?php endif; ?>
 
-<?php if (!ac3_is_archives() && !ac3_is_about()): ?>
+<?php if (!ac3_is_archives()): ?>
 <section id="recent" class="post-links">
   <h1>ac.recent</h1>
   <ul>
@@ -122,5 +122,15 @@
       <?php endforeach; ?>
     </ul>
   </div>
+</section>
+<?php endif; ?>
+
+<?php if (ac3_is_about()): ?>
+<section id="contact-me">
+  <h1>ac.contact</h1>
+  <aside>
+    Direct any of your questions or comments here:
+  </aside>
+  <?php insert_cform('Contact Me'); ?>
 </section>
 <?php endif; ?>
