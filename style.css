@@ -1125,3 +1125,35 @@ section.post-links .post .sidebar-post-categories {
       float: left;
       margin: 5px 40px;
       width: 260px; }
+
+#about-banner {
+  position: relative; }
+  #about-banner #about-banner-image {
+    -moz-border-top-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-background-clip: padding-box;
+    -moz-border-top-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-background-clip: padding-box;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    margin: 40px; }
+  #about-banner #about-text {
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    width: 320px;
+    color: #111; }
+    #about-banner #about-text h1 {
+      font-family: "Raleway", sans-serif;
+      font-size: 24px;
+      font-weight: 100;
+      color: #c0ad6b;
+      text-align: right; }
+    #about-banner #about-text p {
+      -webkit-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+      -moz-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2); }
