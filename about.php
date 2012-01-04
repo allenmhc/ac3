@@ -15,8 +15,8 @@ define('WP_USE_THEMES', false);
     <div id="about-text">
       <h1>ac.about</h1>
       <p>
-        I'm a front-end web software engineer who cares about a clean design, both
-        in the user interface and the code its built upon.
+        I'm a software engineer on the front-end of the web. I like clean designs, elegant code,
+        and simple products. I write about stuff and take bad pictures.
       </p>
     </div>
   </section>
