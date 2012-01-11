@@ -10,6 +10,7 @@
   <meta charset="<?php bloginfo('charset'); ?>" />
   <title><?php wp_title(); ?></title>
 
+  <link rel="shortcut icon" href="<?php echo get_bloginfo('template_directory'); ?>/images/favicon.png" />
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:100" type="text/css" />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
