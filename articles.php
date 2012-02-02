@@ -9,7 +9,8 @@ define('WP_USE_THEMES', false);
   get_header();
   $articles = get_posts(array(
     "meta_key" => "article",
-    "meta_value" => 1
+    "meta_value" => 1,
+    "numberposts" => -1
   ));
   // Find all the categories associated with articles, create a mapping of category name -> id + name + posts.
   $article_categories = array();
