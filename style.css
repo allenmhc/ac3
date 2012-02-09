@@ -585,6 +585,9 @@ article.post {
     article.post .more-link:hover {
       border: none !important; }
     article.post .more-link img {
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
       width: 8px; }
 
 article.post .post-body {

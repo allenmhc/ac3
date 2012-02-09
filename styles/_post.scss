@@ -53,6 +53,7 @@ article.post {
     padding-left: 5px;
     &:hover { border: none !important; }
     img {
+      @include box-shadow(none !important);
       width: 8px;
     }
   }
