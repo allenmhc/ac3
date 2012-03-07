@@ -768,6 +768,10 @@ footer {
         -webkit-box-shadow: 0 0 8px #c0ad6b;
         -moz-box-shadow: 0 0 8px #c0ad6b;
         box-shadow: 0 0 8px #c0ad6b; }
+      #elsewhere li img:active {
+        -webkit-box-shadow: 0 0 10px #859fb8;
+        -moz-box-shadow: 0 0 10px #859fb8;
+        box-shadow: 0 0 10px #859fb8; }
 
 #searchform {
   position: relative; }

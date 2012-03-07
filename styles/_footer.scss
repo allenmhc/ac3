@@ -62,6 +62,9 @@ footer {
       &:hover {
         @include box-shadow(0 0 8px $color-sec);
       }
+      &:active {
+        @include box-shadow(0 0 10px $color-prim);
+      }
     }
   }
 }
