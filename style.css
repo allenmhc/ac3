@@ -359,7 +359,7 @@ header#site-header {
   background-image: -webkit-linear-gradient(top, #a1afbd, #859fb8);
   background-image: -ms-linear-gradient(top, #a1afbd, #859fb8);
   background-color: #a1afbd;
-  position: fixed;
+  position: absolute;
   top: 0;
   height: 60px;
   clear: both;
