@@ -23,33 +23,7 @@
         </p>
       </div>
     </div>
-
-    <div id="footer-beta">
-      <ul id="elsewhere" class="clearfix">
-        <li id="elsewhere-linkedin">
-          <a href="http://www.linkedin.com/in/allencheung" target="_blank" title="LinkedIn" class="icon" rel="me">
-            <img src="<?php ac3_images_dir(); ?>/footer/i_linkedin.png" alt="LinkedIn" />
-          </a>
-        </li>
-        <li id="elsewhere-flickr">
-          <a href="http://www.flickr.com/photos/datheron/" target="_blank" title="Flickr" class="icon" rel="me">
-            <img src="<?php ac3_images_dir(); ?>/footer/i_flickr.png" alt="Flickr" />
-          </a>
-        </li>
-        <li id="elsewhere-googleplus">
-          <a rel="author" target="_blank" title="Google+" class="icon" rel="me"
-              href="https://profiles.google.com/allenc">
-            <img src="<?php ac3_images_dir(); ?>/footer/i_googleplus.png" alt="Google+" />
-          </a>
-        </li>
-        <li id="elsewhere-twitter">
-          <a href="http://twitter.com/#!/allenmhc" target="_blank" title="Twitter" class="icon" rel="me">
-            <img src="<?php ac3_images_dir(); ?>/footer/i_twitter.png" alt="Twitter" />
-          </a>
-        </li>
-      </div>
-    </div>
- </footer>
+  </footer>
 
   <?php
     wp_footer();
