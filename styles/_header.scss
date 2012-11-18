@@ -34,6 +34,7 @@ header#site-header {
     line-height: 60px;
     letter-spacing: 2px;
     z-index: 10;
+    -webkit-font-smoothing: antialiased;
   }
   &:hover {
     h1 {

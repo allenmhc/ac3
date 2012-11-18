@@ -384,7 +384,8 @@ header#site-header {
     color: #eee;
     line-height: 60px;
     letter-spacing: 2px;
-    z-index: 10; }
+    z-index: 10;
+    -webkit-font-smoothing: antialiased; }
   #header-title:hover h1 {
     color: #fff; }
   #header-title h3 {
