@@ -637,7 +637,7 @@ article.post .post-body {
     margin-left: auto;
     margin-right: auto; }
   article.post .post-body ul, article.post .post-body ol {
-    list-style-position: inside;
+    list-style-position: outside;
     margin: 0 20px; }
     article.post .post-body ul li, article.post .post-body ol li {
       margin: 8px 0;
