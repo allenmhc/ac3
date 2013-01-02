@@ -602,7 +602,6 @@ article.post .post-body {
       line-height: 0; }
   article.post .post-body blockquote {
     border-left: 1px solid #a1afbd;
-    font-size: 12px;
     line-height: 16px;
     margin: 0 10px 0 0;
     padding: 0 25px; }
