@@ -69,7 +69,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   margin: 1em 0;
   padding: 0; }
 
@@ -220,19 +220,16 @@ button {
 .clearboth {
   clear: both; }
 
-@media all and (orientation:portrait) {}
-@media all and (orientation:landscape) {}
 @media screen and (max-device-width: 480px) {
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */ }
-
 @media print {
   * {
     background: transparent !important;
-    color: #444 !important;
+    color: #444444 !important;
     text-shadow: none !important; }
 
   a, a:visited {
-    color: #444 !important;
+    color: #444444 !important;
     text-decoration: underline; }
 
   a:after {
@@ -245,7 +242,7 @@ button {
     content: ""; }
 
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid; }
 
   thead {
@@ -263,7 +260,6 @@ button {
 
   h2, h3 {
     page-break-after: avoid; } }
-
 @font-face {
   font-family: 'Proxima Nova';
   src: url("fonts/proximanova-regular.eot");
@@ -595,6 +591,9 @@ article.post .post-body {
   color: #222; }
   article.post .post-body h1, article.post .post-body h2, article.post .post-body h3, article.post .post-body h4, article.post .post-body h5, article.post .post-body h6 {
     margin-top: 25px; }
+  article.post .post-body h2, article.post .post-body h3 {
+    font-size: 18px;
+    font-weight: normal; }
   article.post .post-body p {
     line-height: 24px;
     margin: 15px 0; }
@@ -879,7 +878,7 @@ section.post-links .post .sidebar-post-categories {
     font-weight: normal;
     padding-bottom: 3px;
     margin-bottom: 5px;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #bbbbbb;
     width: 180px;
     display: block; }
   #beta .post-list .year-post-list {
